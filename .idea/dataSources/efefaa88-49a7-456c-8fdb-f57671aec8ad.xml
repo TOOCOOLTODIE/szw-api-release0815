@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="staff@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
+    <root id="1"/>
+    <schema id="2" parent="1" name="staff">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="login"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="vhr"/>
+    <schema id="8" parent="1" name="xiaoya"/>
+    <table id="9" parent="2" name="staff"/>
+    <table id="10" parent="2" name="user"/>
+    <column id="11" parent="9" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="12" parent="9" name="name">
+      <Position>2</Position>
+      <Comment>姓名</Comment>
+      <DataType>varchar(60)|0</DataType>
+    </column>
+    <column id="13" parent="9" name="sex">
+      <Position>3</Position>
+      <Comment>性别</Comment>
+      <DataType>char(2)|0</DataType>
+    </column>
+    <column id="14" parent="9" name="birthday">
+      <Position>4</Position>
+      <Comment>出生日期</Comment>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <column id="15" parent="9" name="id_card">
+      <Position>5</Position>
+      <Comment>身份证号</Comment>
+      <DataType>char(18)|0</DataType>
+    </column>
+    <column id="16" parent="9" name="is_merried">
+      <Position>6</Position>
+      <Comment>婚姻状况</Comment>
+      <DataType>char(2)|0</DataType>
+    </column>
+    <column id="17" parent="9" name="nation">
+      <Position>7</Position>
+      <Comment>民族</Comment>
+      <DataType>char(100)|0</DataType>
+    </column>
+    <column id="18" parent="9" name="native_place">
+      <Position>8</Position>
+      <Comment>籍贯</Comment>
+      <DataType>varchar(60)|0</DataType>
+    </column>
+    <column id="19" parent="9" name="politial_status">
+      <Position>9</Position>
+      <Comment>政治面貌</Comment>
+      <DataType>varchar(60)|0</DataType>
+    </column>
+    <column id="20" parent="9" name="email">
+      <Position>10</Position>
+      <Comment>电子邮件</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="21" parent="9" name="update_time">
+      <Position>11</Position>
+      <Comment>更新时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="22" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="23" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="24" parent="10" name="name">
+      <Position>2</Position>
+      <Comment>登录名</Comment>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="10" name="password">
+      <Position>3</Position>
+      <Comment>登录密码</Comment>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="26" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
