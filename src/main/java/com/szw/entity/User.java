@@ -15,7 +15,7 @@ public class User implements Serializable {
     private String name;
 
     /**
-     * 登录密码
+     * 登录密码。
      */
     private String password;
 
