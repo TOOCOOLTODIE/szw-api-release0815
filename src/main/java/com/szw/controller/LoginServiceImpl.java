@@ -30,22 +30,19 @@ public class LoginServiceImpl implements LoginService{
         User user = new User();
         user.setName(name);
         user.setPassword(password);
-        int count = userDao.selectUserExist(user);
-        if(count == 1){
+
+        User user1 = userDao.selectUserExist(user);
+        if(user1 != null){
             respBean.setMsg("登录成功！");
             respBean.setStatus(200);
-            respBean.setObj(user);
+            respBean.setObj(user1);
             return respBean;
-        }else if(count < 1){
+        }else{
             respBean.setMsg("账户名或者密码错误！");
             respBean.setStatus(401);
-            respBean.setObj(user);
+            respBean.setObj(user1);
             return respBean;
         }
-        respBean.setStatus(500);
-        respBean.setMsg("登录失败！");
-        respBean.setObj(null);
-        return respBean;
     }
 
 

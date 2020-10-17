@@ -4,7 +4,6 @@ import com.szw.entity.User;
 import com.szw.entity.UserExample;
 import java.util.List;
 
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 public interface UserDao {
@@ -30,5 +29,5 @@ public interface UserDao {
 
     int updateByPrimaryKey(User record);
 
-    int selectUserExist(User user);
+    User selectUserExist(User user);
 }

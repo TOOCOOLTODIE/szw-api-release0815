@@ -8,7 +8,7 @@
   </resultMap>
 
 
-  <select id="selectUserExist" resultType="int" parameterType="com.szw.entity.User">
-    SELECT COUNT(1) FROM user u WHERE u.name=#{name} and u.password=#{password}
+  <select id="selectUserExist" resultType="com.szw.entity.User" parameterType="com.szw.entity.User">
+    SELECT u.id,u.name FROM user u WHERE u.name=#{name} and u.password=#{password}
   </select>
 </mapper>
